@@ -9,9 +9,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $values = Post::with('comments')->get();
 
-        return view("posts.post", compact("posts"));
+        return view("posts.post", compact("values"));
     }
 }
-
