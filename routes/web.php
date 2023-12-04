@@ -21,3 +21,5 @@ Route::get('/', function () {
 
 Route::get('posts/post', [PostController::class, 'index']);
 
+Route::get('user', [])
+
