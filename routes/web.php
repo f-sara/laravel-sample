@@ -19,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts/post', [PostController::class, 'index']);
+Route::get('posts/comments', [PostController::class, 'comment']);
 
-Route::get('user', [])
-
+Route:: get("posts/users", [PostController::class, "name"]);

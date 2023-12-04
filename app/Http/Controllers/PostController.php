@@ -7,10 +7,18 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index()
+    public function comment()
     {
         $values = Post::with('comments')->get();
 
-        return view("posts.post", compact("values"));
+        return view("posts.comment", compact("values"));
     }
+
+    public function name()
+    {
+        $values = Post::with('name')->get();
+        
+        return view("posts.name", compact("values"));
+    }
+
 }
