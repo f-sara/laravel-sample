@@ -22,3 +22,6 @@ Route::get('/', function () {
 Route::get('posts/comments', [PostController::class, 'comment']);
 
 Route:: get("posts/users", [PostController::class, "name"]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
